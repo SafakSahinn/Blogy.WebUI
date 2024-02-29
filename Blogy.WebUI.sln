@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogy.WebUI", "Blogy.WebUI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogy.EntityLayer", "Blogy.EntityLayer\Blogy.EntityLayer.csproj", "{1FE7D107-B18C-4CFE-A5D9-B856CC6B5C29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogy.DataAccessLayer", "Blogy.DataAccessLayer\Blogy.DataAccessLayer.csproj", "{6ECDA6C7-4DE2-4DD9-927F-CF02DB988AFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1FE7D107-B18C-4CFE-A5D9-B856CC6B5C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FE7D107-B18C-4CFE-A5D9-B856CC6B5C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FE7D107-B18C-4CFE-A5D9-B856CC6B5C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECDA6C7-4DE2-4DD9-927F-CF02DB988AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECDA6C7-4DE2-4DD9-927F-CF02DB988AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECDA6C7-4DE2-4DD9-927F-CF02DB988AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECDA6C7-4DE2-4DD9-927F-CF02DB988AFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
