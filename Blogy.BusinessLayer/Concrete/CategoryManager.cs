@@ -9,38 +9,43 @@ using System.Threading.Tasks;
 
 namespace Blogy.BusinessLayer.Concrete
 {
-    public class CategoryManager : ICategoryService
-    {
-        private readonly ICategoryDal _categoryDal;
+	public class CategoryManager : ICategoryService
+	{
+		private readonly ICategoryDal _categoryDal;
 
-        public CategoryManager(ICategoryDal categoryDal)
-        {
-            _categoryDal = categoryDal;
-        }
+		public CategoryManager(ICategoryDal categoryDal)
+		{
+			_categoryDal = categoryDal;
+		}
 
-        public void TDelete(int id)
-        {
-            _categoryDal.Delete(id);
-        }
+		public void TDelete(int id)
+		{
+			_categoryDal.Delete(id);
+		}
 
-        public Category TGetById(int id)
-        {
-            return _categoryDal.GetById(id);
-        }
+		public Category TGetById(int id)
+		{
+			return _categoryDal.GetById(id);
+		}
 
-        public List<Category> TGetListAll()
-        {
-            return _categoryDal.GetListAll();
-        }
+		public int TGetCategoryCount()
+		{
+			return _categoryDal.GetCategoryCount();
+		}
 
-        public void TInsert(Category entity)
-        {
-            _categoryDal.Insert(entity);
-        }
+		public List<Category> TGetListAll()
+		{
+			return _categoryDal.GetListAll();
+		}
 
-        public void TUpdate(Category entity)
-        {
-            _categoryDal.Update(entity);
-        }
-    }
+		public void TInsert(Category entity)
+		{
+			_categoryDal.Insert(entity);
+		}
+
+		public void TUpdate(Category entity)
+		{
+			_categoryDal.Update(entity);
+		}
+	}
 }
