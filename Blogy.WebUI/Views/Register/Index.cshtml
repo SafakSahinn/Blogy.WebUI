@@ -1,26 +1,30 @@
 ﻿@model CreateRegisterViewModel
 @{
-    Layout = null;
+	Layout = null;
 }
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
 <div class="container">
-    <br /><br />
-    <label>Adınız</label>
-    <input type="text" class="form-control" asp-for="Name"/>
-    <br />
-    <label>Soyadınız</label>
-    <input type="text" class="form-control" asp-for="Surname" />
-    <br />
-    <label>Kullanıcı Adı</label>
-    <input type="text" class="form-control" asp-for="UserName" />
-    <br />
-    <label>E-Posta</label>
-    <input type="text" class="form-control" asp-for="Email" />
-    <br />
-    <label>Şifre</label>
-    <input type="text" class="form-control" asp-for="Password" />
-    <br />
-    <button class="btn btn-info">Kayıt ol</button>
+	<form method="post">
+		<br /><br />
+		<label>Adınız</label>
+		<input type="text" class="form-control" asp-for="Name" />
+		<br />
+		<label>Soyadınız</label>
+		<input type="text" class="form-control" asp-for="Surname" />
+		<br />
+		<label>Kullanıcı Adı</label>
+		<input type="text" class="form-control" asp-for="UserName" />
+		<br />
+		<label>E-Posta</label>
+		<input type="text" class="form-control" asp-for="Email" />
+		<br />
+		<label>Şifre</label>
+		<input type="text" class="form-control" asp-for="Password" />
+		<br />
+		<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+		<br />
+		<button class="btn btn-info">Kayıt ol</button>
+	</form>
 </div>

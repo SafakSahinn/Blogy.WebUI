@@ -28,13 +28,22 @@ namespace Blogy.WebUI.Controllers
                 Name = p.Name,
                 Email = p.Email,
                 Surname = p.Surname,
-                UserName = p.UserName
+                UserName = p.UserName,
+                Description = "aa",
+                ImageUrl = "bb"
             };
 
             var result = await _userManager.CreateAsync(appUser, p.Password);
             if(result.Succeeded)
             {
                 return RedirectToAction("Index", "Login");
+            }
+            else
+            {
+                foreach(var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
             }
             return View();
         }
