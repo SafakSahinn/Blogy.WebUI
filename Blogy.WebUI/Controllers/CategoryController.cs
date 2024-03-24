@@ -1,4 +1,5 @@
 ﻿using Blogy.BusinessLayer.Abstract;
+using Blogy.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blogy.WebUI.Controllers
@@ -16,6 +17,19 @@ namespace Blogy.WebUI.Controllers
 		{
 			var values = _categoryService.TGetListAll();
 			return View(values);
+		}
+
+		[HttpGet]
+		public IActionResult CreateCategory()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult CreateCategory(Category category)
+		{
+			_categoryService.TInsert(category);
+			return RedirectToAction("CategoryList");
 		}
 	}
 }
