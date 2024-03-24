@@ -20,12 +20,20 @@ namespace Blogy.BusinessLayer.Concrete
 
         public void TDelete(int id)
         {
-            _articleDal.Delete(id);
+            if (id != 0)
+            {
+                _articleDal.Delete(id);
+            }
+            else
+            {
+                //hata mesajı
+            }
         }
 
         public Article TGetById(int id)
         {
-            return _articleDal.GetById(id); 
+            //eğer id değerine göre yetkisi varsa
+            return _articleDal.GetById(id);
         }
 
         public List<Article> TGetListAll()
@@ -35,12 +43,26 @@ namespace Blogy.BusinessLayer.Concrete
 
         public void TInsert(Article entity)
         {
-            _articleDal.Insert(entity);
+            if (entity.Title != null && entity.Description.Length > 50 && entity.CategoryId >= 0)
+            {
+                _articleDal.Insert(entity);
+            }
+            else
+            {
+                //hata mesajı
+            }
         }
 
         public void TUpdate(Article entity)
         {
-            _articleDal.Update(entity);
+            if (entity.Title != null && entity.Description.Length > 50 && entity.CategoryId >= 0)
+            {
+                _articleDal.Update(entity);
+            }
+            else
+            {
+                //hata mesajı
+            }
         }
     }
 }
