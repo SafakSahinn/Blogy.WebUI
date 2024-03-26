@@ -19,6 +19,6 @@ namespace Blogy.WebUI.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> Index(UserSingInView)
+		public async Task<IActionResult> Index(UserSingInView)lıjoşıj
 	}
 }
